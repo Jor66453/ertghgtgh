@@ -1,26 +1,13 @@
-local bannedIDs = {
+local whitelistedIDs = {
     1716548835,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123,
-    123
+    456789123,
+    987654321,
+    123456789
 }
 
-local function checkBan(userId)
-    for _, bannedId in ipairs(bannedIDs) do
-        if userId == bannedId then
+local function checkWhitelist(userId)
+    for _, whitelistedId in ipairs(whitelistedIDs) do
+        if userId == whitelistedId then
             return true
         end
     end
@@ -29,8 +16,8 @@ end
 
 local localPlayer = game.Players.LocalPlayer
 
-if checkBan(localPlayer.UserId) then
-    localPlayer:Kick("I am castiel, owner of the gui you are using!")
+if not checkWhitelist(localPlayer.UserId) then
+    localPlayer:Kick("You are not approved to use this GUI! Please DM 'grimerah' aka Castiel in Discord to get approved.")
     return
 end
 
