@@ -16,11 +16,13 @@ end
 
 local localPlayer = game.Players.LocalPlayer
 
+-- Ensure whitelist check runs before anything else
 if not checkWhitelist(localPlayer.UserId) then
     localPlayer:Kick("You are not approved to use this GUI! Please DM 'grimerah' aka Castiel in Discord to get approved.")
     return
 end
 
+-- Proceed with the rest of the script
 print("SuperNatural Script: Loading..")
 print("Loaded!")
 
