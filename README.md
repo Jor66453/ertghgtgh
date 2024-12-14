@@ -31,7 +31,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 -- Create the main window
 local Window = Rayfield:CreateWindow({
-    Name = "SUPERNATURAL [BETA🩸] HUB",
+    Name = "SUPERNATURAL [BETA] HUB",
     LoadingTitle = "SUPERNATURAL [BETA🩸]",
     LoadingSubtitle = "Loading..",
     ConfigurationSaving = {
