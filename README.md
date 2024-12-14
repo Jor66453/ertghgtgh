@@ -1,5 +1,5 @@
 local bannedIDs = {
-    123,
+    1716548835,
     123,
     123,
     123,
@@ -30,7 +30,7 @@ end
 local localPlayer = game.Players.LocalPlayer
 
 if checkBan(localPlayer.UserId) then
-    localPlayer:Kick("Banned Off The HUB!")
+    localPlayer:Kick("I am castiel, owner of the gui you are using!")
     return
 end
 
